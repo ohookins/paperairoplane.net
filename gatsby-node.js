@@ -14,16 +14,19 @@ exports.createPages = ({graphql, boundActionCreators}) => {
                             node {
                                 id
                                 slug
+                                title
+                                body {
+                                    body
+                                }
                             }
                         }
                     }
                 }
             `).then((result) => {
+                console.log(result);
                 if (result.errors) {
                     reject(result.errors);
                 }
-
-                console.log(result);
 
                 result.data.allContentfulPost.edges.forEach((edge) => {
                     createPage ({
@@ -31,7 +34,8 @@ exports.createPages = ({graphql, boundActionCreators}) => {
                         component: blogPostTemplate,
                         context: {
                             slug: edge.node.slug,
-                            bodyText: edge.node.bodyText,
+                            title: edge.node.title,
+                            bodyText: edge.node.body,
                         }
                     })
                 });

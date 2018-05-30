@@ -1,17 +1,18 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import './index.css'
 
 const BlogPost = ({node}) => {
   return (
     <li>
-      <Link to={node.slug}>{node.title}</Link>
-      <div dangerouslySetInnerHTML={{__html: node.bodyText.childMarkdownRemark.excerpt }} />
+      <Link to={node.slug} className="indexLink">{node.title}</Link>
+      <div dangerouslySetInnerHTML={{__html: node.body.childMarkdownRemark.excerpt }} className="indexSummary"/>
     </li>
   )
 }
 
 const IndexPage = ({data}) => (
-  <ul>
+  <ul className="indexList">
     {data.allContentfulPost.edges.map((edge) => <BlogPost node={edge.node} />)}
   </ul>
 )
@@ -27,7 +28,7 @@ export const pageQuery = graphql`
         node {
           title
           slug
-          bodyText {
+          body {
             childMarkdownRemark {
               excerpt
             }
