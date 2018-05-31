@@ -10,7 +10,7 @@ import './index.css'
 const TemplateWrapper = ({ children }) => (
   <div>
     <Helmet
-      title="hookins.name"
+      title="adrift on a cosmic ocean"
       meta={[
         { name: 'description', content: 'Personal blog of Oliver Hookins and Angela Collins' },
         { name: 'keywords', content: 'technology, leadership, management, yoga, fitness, life' },
@@ -22,7 +22,7 @@ const TemplateWrapper = ({ children }) => (
       display: 'flex',
       justifyContent: 'center'
     }}>
-      <div className="fl w-70 bg-dark-gray pa3">
+      <div className="fl w-70 bg-dark-gray pa3 pl5 pr5">
         {children()}
       </div>
     </div>

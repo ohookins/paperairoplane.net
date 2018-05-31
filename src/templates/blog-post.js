@@ -1,15 +1,21 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import PublishLine from '../components/PublishLine'
 
 class BlogPost extends Component {
     render() {
         const {
             title,
-            body
+            body,
+            author,
+            published,
+            category,
+            tags,
         } = this.props.data.contentfulPost;
         return (
             <div>
                 <h1>{title}</h1>
+                <PublishLine author={author.firstName} published={published} category={category.realname} />
                 <div dangerouslySetInnerHTML={{__html: body.childMarkdownRemark.html}} />
             </div>
         )
@@ -27,6 +33,16 @@ export const pageQuery = graphql`
         contentfulPost(slug: {eq: $slug}) {
             title
             slug
+            author {
+                firstName
+            }
+            published
+            category {
+                realname
+            }
+            tags {
+                realname
+            }
             body {
                 childMarkdownRemark {
                     html

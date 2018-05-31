@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'hookins.name',
+    title: 'paperairoplane.net',
   },
   plugins: [
     'gatsby-plugin-react-helmet',

@@ -15,6 +15,16 @@ exports.createPages = ({graphql, boundActionCreators}) => {
                                 id
                                 slug
                                 title
+                                published
+                                category {
+                                    realname
+                                }
+                                tags {
+                                    realname
+                                }
+                                author {
+                                    firstName
+                                }
                                 body {
                                     body
                                 }
@@ -23,19 +33,22 @@ exports.createPages = ({graphql, boundActionCreators}) => {
                     }
                 }
             `).then((result) => {
-                console.log(result);
                 if (result.errors) {
                     reject(result.errors);
                 }
 
                 result.data.allContentfulPost.edges.forEach((edge) => {
                     createPage ({
-                        path: edge.node.slug,
+                        path: "posts/" + edge.node.slug,
                         component: blogPostTemplate,
                         context: {
                             slug: edge.node.slug,
                             title: edge.node.title,
-                            bodyText: edge.node.body,
+                            author: edge.node.author.firstName,
+                            published: edge.node.published,
+                            category: edge.node.category.realname,
+                            tags: edge.node.tags,
+                            body: edge.node.body,
                         }
                     })
                 });

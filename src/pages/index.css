@@ -1,11 +1,12 @@
 ul.indexList {
     list-style-type: none;
-    padding: 0 30px 0 30px;
+    padding: 0;
 }
 
 a.indexLink {
     font-family: Cabin,sans-serif;
     font-size: 2em;
+    font-weight: bold;
 }
 
 div.indexSummary {

@@ -9,7 +9,7 @@ const Header = () => (
       }}
     >
 
-      <h1 className="f2 f-headline-m fw8 quattrocento">
+      <h1 className="f1 f-headline-m fw8 quattrocento">
         <Link
           to="/"
           style={{
@@ -18,7 +18,7 @@ const Header = () => (
             textShadow: "1px 1px #555555"
           }}
         >
-          paper airoplane - an incorrectly spelled blog
+          adrift on a cosmic ocean
         </Link>
       </h1>
 
