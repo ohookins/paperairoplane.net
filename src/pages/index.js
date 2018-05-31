@@ -30,7 +30,7 @@ export const pageQuery = graphql`
           slug
           body {
             childMarkdownRemark {
-              excerpt
+              excerpt(pruneLength: 400)
             }
           }
         }

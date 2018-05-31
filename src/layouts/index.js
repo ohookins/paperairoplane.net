@@ -12,8 +12,8 @@ const TemplateWrapper = ({ children }) => (
     <Helmet
       title="hookins.name"
       meta={[
-        { name: 'description', content: 'Personal blog of Oliver Hookins' },
-        { name: 'keywords', content: 'technology, leadership, management, fitness' },
+        { name: 'description', content: 'Personal blog of Oliver Hookins and Angela Collins' },
+        { name: 'keywords', content: 'technology, leadership, management, yoga, fitness, life' },
       ]}
     />
     <Header />
