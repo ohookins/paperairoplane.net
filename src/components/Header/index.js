@@ -9,7 +9,7 @@ const Header = () => (
       }}
     >
 
-      <h1 className="f1 f-headline-l fw8 quattrocento">
+      <h1 className="f2 f-headline-m fw8 quattrocento">
         <Link
           to="/"
           style={{
@@ -18,7 +18,7 @@ const Header = () => (
             textShadow: "1px 1px #555555"
           }}
         >
-          hookins.name
+          paper airoplane - an incorrectly spelled blog
         </Link>
       </h1>
 
@@ -26,7 +26,7 @@ const Header = () => (
         <p className="washed-blue" style={{
           textShadow: "1px 1px #555555"
         }}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          Writings on various topics (mostly technical) from Oliver Hookins and Angela Collins. We have lived in Berlin since 2009, have two kids, and have far too little time to really justify having a blog.
         </p>
       </blockquote>
     </div>

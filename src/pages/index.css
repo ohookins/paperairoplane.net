@@ -3,10 +3,11 @@ ul.indexList {
 }
 
 a.indexLink {
-    font-size: large;
+    font-family: Cabin,sans-serif;
+    font-size: 2em;
 }
 
 div.indexSummary {
     margin-top: 3px;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 }
