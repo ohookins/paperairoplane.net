@@ -2,10 +2,12 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 const TagCluster = ({tags}) => {
+    const finalTags = tags || [];
+
     return (
         <div className="sans-serif f7">
             <span className="b">Tagged with: </span>
-            {tags.map((tag) => <span className="f7 br2 ph3 pv1 ma1 dib white bg-blue">{tag.realname}</span>)}
+            {finalTags.map((tag) => <span className="f7 br2 ph3 pv1 ma1 dib white bg-blue">{tag.realname}</span>)}
         </div>
     )
 };
