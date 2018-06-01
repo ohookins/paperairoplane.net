@@ -10,10 +10,8 @@ const Header = () => (
     >
 
       <h1 className="f1 f-headline-m fw8 quattrocento">
-        <Link
-          to="/"
+        <Link to="/" className="black-20 dim"
           style={{
-            color: '#999999',
             textDecoration: 'none',
             textShadow: "1px 1px #555555"
           }}

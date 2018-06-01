@@ -18,10 +18,7 @@ const TemplateWrapper = ({ children }) => (
     />
     <Header />
     <Buttons />
-    <div style={{
-      display: 'flex',
-      justifyContent: 'center'
-    }}>
+    <div className="flex justify-center">
       <div className="fl w-70 bg-dark-gray pa3 pl5 pr5">
         {children()}
       </div>
