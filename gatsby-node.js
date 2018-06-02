@@ -1,11 +1,10 @@
 const path = require('path');
+const paginate = require('./utils/paginate');
 
 exports.createPages = ({graphql, boundActionCreators}) => {
     const {createPage} = boundActionCreators;
 
     return new Promise((resolve, reject) => {
-        const blogPostTemplate = path.resolve('src/templates/blog-post.js');
-
         resolve(
             graphql(`
                 {
@@ -36,6 +35,17 @@ exports.createPages = ({graphql, boundActionCreators}) => {
                 if (result.errors) {
                     reject(result.errors);
                 }
+
+                const blogPostTemplate = path.resolve('src/templates/blog-post.js');
+                const indexTemplate = path.resolve('src/templates/index.js');
+
+                paginate(
+                    createPage,
+                    indexTemplate,
+                    '/page',
+                    result.data.allContentfulPost.edges.length,
+                    10
+                )
 
                 result.data.allContentfulPost.edges.forEach((edge) => {
                     createPage ({
