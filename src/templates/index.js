@@ -6,7 +6,7 @@ import './index.css'
 const BlogPost = ({node}) => {
   return (
     <li>
-      <Link to={"posts/" + node.slug} className="indexLink">{node.title}</Link>
+      <Link to={"/posts/" + node.slug} className="indexLink">{node.title}</Link>
       <PublishLine author={node.author.firstName} published={node.published} category={node.category.realname} />
       <div dangerouslySetInnerHTML={{__html: node.body.childMarkdownRemark.excerpt }} className="indexSummary"/>
     </li>
