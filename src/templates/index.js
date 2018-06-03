@@ -20,7 +20,7 @@ class IndexPage extends React.Component {
         
         return (
             <div>
-                <ul className="indexList">
+                <ul className="list pl0">
                     {posts.map((edge) => <BlogPost key={edge.node.slug} node={edge.node} />)}
                 </ul>
 
