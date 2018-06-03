@@ -56,6 +56,10 @@ export const pageQuery = graphql`
     allContentfulPost (filter: {
       node_locale: {eq: "en-US"}
     },
+    sort: {
+        fields: [published],
+        order: DESC
+    },
     skip: $skip,
     limit: $limit
     ) {
