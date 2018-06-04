@@ -7,7 +7,7 @@ const PublishLine = ({author, published, category}) => {
     const humanDate = format(parsedDate, "Do [of] MMMM, YYYY")
 
     return (
-        <div className="sans-serif i">
+        <div className="sans-serif i f6 f6-m f5-ns">
             <span>Posted by </span>
             <span className="b">{author}</span>
             <span> on the </span>
