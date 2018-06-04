@@ -15,7 +15,7 @@ class BlogPost extends Component {
         } = this.props.data.contentfulPost;
         return (
             <div>
-                <h1>{title}</h1>
+                <h1 className="f4 f3-ns">{title}</h1>
                 <PublishLine author={author.firstName} published={published} category={category.realname} />
                 <TagCluster tags={tags} />
                 <div dangerouslySetInnerHTML={{__html: body.childMarkdownRemark.html}} />

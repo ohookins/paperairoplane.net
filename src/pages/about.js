@@ -6,7 +6,7 @@ const AboutPage = () => (
   <div className="flex flex-column">
     <h2>About the authors...</h2>
     <div>
-        <img className="fl pa2" src={oliver} />
+        <img className="fl pa2 mw3 mw-100-ns" src={oliver} />
         <p className="f5 pl1">
         You can find Oliver
         on <a href="https://www.linkedin.com/in/oliverhookins/" className="b"> LinkedIn </a>
@@ -14,7 +14,7 @@ const AboutPage = () => (
         </p>
     </div>
     <div>
-        <img className="fl pa2" src={angela} />
+        <img className="fl pa2 mw3 mw-100-ns" src={angela} />
         <p className="f5 pl1">
         You can find Angela on <a href="https://www.facebook.com/angelacollinsyogaberlin/" className="b">Facebook</a>,
         <a href="https://twitter.com/Yogawithangela" className="b"> Twitter </a>

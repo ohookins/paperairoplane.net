@@ -9,7 +9,7 @@ const Header = () => (
       }}
     >
 
-      <h1 className="f1 f-headline-m fw8 quattrocento">
+      <h1 className="f-headline-m fw8 quattrocento f3 f1-ns">
         <Link to="/" className="black-50 dim"
           style={{
             textDecoration: 'none',
@@ -20,7 +20,7 @@ const Header = () => (
         </Link>
       </h1>
 
-      <blockquote className="ph0 mh0 measure-wide f5 lh-copy center cabin">
+      <blockquote className="ph0 mh0 measure-wide f7 f5-ns lh-copy center cabin">
         <p className="washed-blue" style={{
           textShadow: "1px 1px #555555"
         }}>
