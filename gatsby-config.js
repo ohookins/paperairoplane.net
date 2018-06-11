@@ -1,21 +1,22 @@
 module.exports = {
   siteMetadata: {
-    title: 'adrift on a cosmic ocean',
-    siteUrl: 'https://paperairoplane.net',
-    description: 'Writings on various topics (mostly technical) from Oliver Hookins and Angela Collins',
+    title: "adrift on a cosmic ocean",
+    siteUrl: "https://paperairoplane.net",
+    description:
+      "Writings on various topics (mostly technical) from Oliver Hookins and Angela Collins"
   },
   plugins: [
-    'gatsby-plugin-react-helmet',
-    'gatsby-transformer-remark',
+    "gatsby-plugin-react-helmet",
+    "gatsby-transformer-remark",
     {
-      resolve: 'gatsby-source-contentful',
+      resolve: "gatsby-source-contentful",
       options: {
         spaceId: process.env.SPACE_ID,
         accessToken: process.env.ACCESS_TOKEN
       }
     },
     {
-      resolve: 'gatsby-plugin-feed',
+      resolve: "gatsby-plugin-feed",
       options: {
         query: `
           {
@@ -29,21 +30,24 @@ module.exports = {
             }
           }
 		`,
-		feeds: [
+        feeds: [
           {
             serialize: ({ query: { site, allContentfulPost } }) => {
               return allContentfulPost.edges.map(edge => {
                 return Object.assign({}, edge.node, {
                   title: edge.node.title,
                   description: edge.node.body.childMarkdownRemark.excerpt,
-                  author: edge.node.author.firstName + " " + edge.node.author.lastName,
+                  author:
+                    edge.node.author.firstName +
+                    " " +
+                    edge.node.author.lastName,
                   date: edge.node.published,
-                  url: site.siteMetadata.siteUrl + '/posts/' + edge.node.slug,
-                  guid: site.siteMetadata.siteUrl + '/posts/' + edge.node.slug,
+                  url: site.siteMetadata.siteUrl + "/posts/" + edge.node.slug,
+                  guid: site.siteMetadata.siteUrl + "/posts/" + edge.node.slug
                 });
               });
             },
-			query: `
+            query: `
               {
                 allContentfulPost (limit: 1000) {
                     edges {
@@ -69,10 +73,10 @@ module.exports = {
                 }
               }
 			`,
-			output: "/rss.xml",
-		  },
-		],
+            output: "/rss.xml"
+          }
+        ]
       }
     }
-  ],
+  ]
 };

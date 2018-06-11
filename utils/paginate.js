@@ -3,21 +3,27 @@
 // Originally from:
 // https://github.com/Khaledgarbaya/chocolate-free-website/blob/master/utils/paginate.js
 
-const _ = require(`lodash`)
+const _ = require(`lodash`);
 
 const paginationPath = (path, page, totalPages) => {
   if (page === 0) {
-    return '/'
+    return "/";
   } else if (page < 0 || page >= totalPages) {
-    return ''
+    return "";
   } else {
-    return `${path}/${page + 1}`
+    return `${path}/${page + 1}`;
   }
-}
+};
 
-module.exports = (createPage, componentPath, basePath, totalPages, perPage = 3) => {
-  const pages = Math.ceil(totalPages / perPage)
-  _.times(pages, (index) => {
+module.exports = (
+  createPage,
+  componentPath,
+  basePath,
+  totalPages,
+  perPage = 3
+) => {
+  const pages = Math.ceil(totalPages / perPage);
+  _.times(pages, index => {
     createPage({
       // Calculate the path for this page like `/blog`, `/blog/2`
       path: paginationPath(basePath, index, totalPages),
@@ -34,8 +40,8 @@ module.exports = (createPage, componentPath, basePath, totalPages, perPage = 3) 
         // The path to the previous paginated page (or an empty string)
         prevPath: paginationPath(basePath, index - 1, totalPages),
         // The path to the next paginated page (or an empty string)
-        nextPath: paginationPath(basePath, index + 1, totalPages),
+        nextPath: paginationPath(basePath, index + 1, totalPages)
       }
-    })
-  })
-}
+    });
+  });
+};
