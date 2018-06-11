@@ -1,13 +1,14 @@
 {
   "name": "paperairoplane.net",
   "description": "My personal website",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Oliver Hookins <ohookins@gmail.com>",
   "homepage": "https://paperairoplane.net",
   "dependencies": {
     "date-fns": "^1.29.0",
     "gatsby": "^1.9.199",
     "gatsby-link": "^1.6.37",
+    "gatsby-plugin-feed": "^1.3.24",
     "gatsby-plugin-react-helmet": "^2.0.5",
     "gatsby-source-contentful": "^1.3.38",
     "gatsby-transformer-remark": "^1.7.37",
@@ -17,6 +18,7 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
+    "serve": "gatsby serve",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
