@@ -1,11 +1,12 @@
 {
   "name": "paperairoplane.net",
   "description": "My personal website",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "Oliver Hookins <ohookins@gmail.com>",
   "homepage": "https://paperairoplane.net",
   "dependencies": {
     "date-fns": "^1.29.0",
+    "disqus-react": "^1.0.5",
     "gatsby": "^1.9.199",
     "gatsby-link": "^1.6.37",
     "gatsby-plugin-feed": "^1.3.24",
