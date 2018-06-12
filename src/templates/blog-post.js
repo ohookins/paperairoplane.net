@@ -17,9 +17,9 @@ class BlogPost extends Component {
     } = this.props.data.contentfulPost;
     const disqusShortname = "paperairoplane";
     const disqusConfig = {
-        url: "https://paperairoplane.net/posts/" + slug,
-        identifier: slug,
-        title: title,
+      url: "https://paperairoplane.net/posts/" + slug,
+      identifier: slug,
+      title: title
     };
 
     return (

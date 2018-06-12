@@ -17,6 +17,12 @@ const Buttons = () => (
         >
           About
         </Link>
+        <a
+          href="/rss.xml"
+          className="link dim ph4 ph3-m pv2 pv1-m mb2 dib white-90 bg-mid-gray"
+        >
+          RSS
+        </a>
       </div>
     </div>
   </div>
