@@ -29,8 +29,10 @@ const BlogPost = ({ node }) => {
 
 class IndexPage extends React.Component {
   render() {
-    const { nextPath, prevPath } = this.props.pathContext;
+    const { nextPath, prevPath, pageID } = this.props.pathContext;
     const posts = this.props.data.allContentfulPost.edges;
+
+    console.log(this.props.pathContext);
 
     return (
       <div>
@@ -41,7 +43,7 @@ class IndexPage extends React.Component {
         </ul>
 
         <div className="flex justify-center cabin b ma4">
-          <div className="previousPost pagination ph2">
+          <div className="ph2">
             {prevPath && (
               <Link to={prevPath}>
                 <svg
@@ -53,14 +55,17 @@ class IndexPage extends React.Component {
                   <title>chevronLeft icon</title>
                   <path d="M20 1 L24 5 L14 16 L24 27 L20 31 L6 16 z" />
                 </svg>
-                <span className="ph2 f4 v-btm">Previous</span>
+                <span className="ph2 f5 f4-ns f4-m v-btm">Previous</span>
               </Link>
             )}
           </div>
-          <div className="nextPost pagination ph2">
+
+          <div className="ph2 f5 f4-ns f4-m pageNumber">{pageID}</div>
+
+          <div className="ph2">
             {nextPath && (
               <Link to={nextPath}>
-                <span className="ph2 f4 v-btm">Next</span>
+                <span className="ph2 f5 f4-ns f4-m v-btm">Next</span>
                 <svg
                   className="w1"
                   data-icon={"chevronRight"}

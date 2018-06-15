@@ -2,3 +2,8 @@ div.indexSummary {
     margin-top: 3px;
     margin-bottom: 30px;
 }
+
+div.pageNumber {
+    color: orangered;
+    text-shadow: #111111 1px 1px;
+}

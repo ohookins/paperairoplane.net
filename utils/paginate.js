@@ -40,7 +40,9 @@ module.exports = (
         // The path to the previous paginated page (or an empty string)
         prevPath: paginationPath(basePath, index - 1, totalPages),
         // The path to the next paginated page (or an empty string)
-        nextPath: paginationPath(basePath, index + 1, totalPages)
+        nextPath: paginationPath(basePath, index + 1, totalPages),
+        // Current page ID for displaying between chevrons
+        pageID: index + 1
       }
     });
   });
