@@ -5,6 +5,7 @@
   "author": "Oliver Hookins <ohookins@gmail.com>",
   "homepage": "https://paperairoplane.net",
   "dependencies": {
+    "@andrew-codes/gatsby-plugin-elasticlunr-search": "^1.0.4",
     "date-fns": "^1.29.0",
     "disqus-react": "^1.0.5",
     "gatsby": "^1.9.199",

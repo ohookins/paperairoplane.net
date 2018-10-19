@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "gatsby-link";
+import Search from "../Search";
 
 const Buttons = () => (
   <div className="flex justify-center">
@@ -23,6 +24,7 @@ const Buttons = () => (
         >
           RSS
         </a>
+        <Search />
       </div>
     </div>
   </div>

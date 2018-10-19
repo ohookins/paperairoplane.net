@@ -77,6 +77,22 @@ module.exports = {
           }
         ]
       }
+    },
+    {
+      resolve: "@andrew-codes/gatsby-plugin-elasticlunr-search",
+      options: {
+        // Fields to index
+        fields: ["slug", "title", "body", "tags"],
+        // How to resolve each field's value for a supported node type
+        resolvers: {
+          // For any node of type MarkdownRemark, list how to resolve the fields' values
+          MarkdownRemark: {
+            title: node => node.frontmatter.title,
+            keywords: node => node.frontmatter.keywords
+          }
+        }
+      }
     }
+
   ]
 };

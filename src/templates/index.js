@@ -32,8 +32,6 @@ class IndexPage extends React.Component {
     const { nextPath, prevPath, pageID } = this.props.pathContext;
     const posts = this.props.data.allContentfulPost.edges;
 
-    console.log(this.props.pathContext);
-
     return (
       <div>
         <ul className="list pl0">
