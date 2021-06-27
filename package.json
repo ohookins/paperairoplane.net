@@ -25,6 +25,6 @@
   },
   "devDependencies": {
     "gatsby-cli": "^1.1.40",
-    "prettier": "^2.3.1"
+    "prettier": "^2.3.2"
   }
 }
