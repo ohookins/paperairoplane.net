@@ -4,6 +4,7 @@ import PublishLine from "../components/PublishLine";
 import TagCluster from "../components/TagCluster";
 import Layout from "../components/Layout"
 import { DiscussionEmbed } from "disqus-react";
+import { graphql } from "gatsby";
 
 class BlogPost extends Component {
   render() {
