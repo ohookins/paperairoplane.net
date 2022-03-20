@@ -32,6 +32,7 @@ module.exports = {
 		`,
         feeds: [
           {
+            title: "paperairoplane.net RSS feed",
             serialize: ({ query: { site, allContentfulPost } }) => {
               return allContentfulPost.edges.map(edge => {
                 return Object.assign({}, edge.node, {
