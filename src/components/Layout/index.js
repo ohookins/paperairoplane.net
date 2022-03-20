@@ -2,9 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 
-import Header from "../components/Header";
-import Buttons from "../components/Buttons";
-import Footer from "../components/Footer";
+import Header from "../Header";
+import Buttons from "../Buttons";
+import Footer from "../Footer";
 import "./index.css";
 
 const TemplateWrapper = ({ children }) => (
@@ -26,7 +26,7 @@ const TemplateWrapper = ({ children }) => (
     <Buttons />
     <div className="flex justify-center">
       <div className="fl bg-dark-gray pa3 pl3 pl3-m pr3 pr3-m w100 pl5-ns pr5-ns w-90-m w-70-ns">
-        {children()}
+        {children}
       </div>
     </div>
     <Footer />
