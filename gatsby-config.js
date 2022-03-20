@@ -6,6 +6,7 @@ module.exports = {
       "Writings on various topics (mostly technical) from Oliver Hookins and Angela Collins"
   },
   plugins: [
+    "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
     "gatsby-transformer-remark",
     {
@@ -32,6 +33,7 @@ module.exports = {
 		`,
         feeds: [
           {
+            title: "paperairoplane.net RSS feed",
             serialize: ({ query: { site, allContentfulPost } }) => {
               return allContentfulPost.edges.map(edge => {
                 return Object.assign({}, edge.node, {
