@@ -1,10 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { parse, format } from "date-fns";
+import { parseISO, format } from "date-fns";
 
 const PublishLine = ({ author, published, category }) => {
-  const parsedDate = parse(published);
-  const humanDate = format(parsedDate, "Do [of] MMMM, YYYY");
+  const parsedDate = parseISO(published);
+  const humanDate = format(parsedDate, "do 'of' MMMM, yyyy");
 
   return (
     <div className="sans-serif i f6 f6-m f5-ns">
