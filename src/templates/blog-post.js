@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import PublishLine from "../components/PublishLine";
 import TagCluster from "../components/TagCluster";
+import Layout from "../components/Layout"
 import { DiscussionEmbed } from "disqus-react";
 
 class BlogPost extends Component {
@@ -23,19 +24,21 @@ class BlogPost extends Component {
     };
 
     return (
-      <div>
-        <h1 className="f4 f4-m f3-ns">{title}</h1>
-        <PublishLine
-          author={author.firstName}
-          published={published}
-          category={category.realname}
-        />
-        <TagCluster tags={tags} />
-        <div
-          dangerouslySetInnerHTML={{ __html: body.childMarkdownRemark.html }}
-        />
-        <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
-      </div>
+      <Layout>
+        <div>
+          <h1 className="f4 f4-m f3-ns">{title}</h1>
+          <PublishLine
+            author={author.firstName}
+            published={published}
+            category={category.realname}
+          />
+          <TagCluster tags={tags} />
+          <div
+            dangerouslySetInnerHTML={{ __html: body.childMarkdownRemark.html }}
+          />
+          <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
+        </div>
+      </Layout>
     );
   }
 }
