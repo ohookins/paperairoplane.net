@@ -30,10 +30,10 @@ const BlogPost = ({ node }) => {
 
 class IndexPage extends React.Component {
   render() {
-    const { nextPath, prevPath, pageID } = this.props.pathContext;
+    const { nextPath, prevPath, pageID } = this.props.pageContext;
     const posts = this.props.data.allContentfulPost.edges;
 
-    console.log(this.props.pathContext);
+    console.log(this.props.pageContext);
 
     return (
       <Layout>
