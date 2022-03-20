@@ -29,9 +29,7 @@ const Header = () => (
           textShadow: "1px 1px #555555"
         }}
       >
-        Writings on various topics (mostly technical) from Oliver Hookins and
-        Angela Collins. We have lived in Berlin since 2009, have two kids, and
-        have far too little time to really justify having a blog.
+        Writings on various topics (mostly technical) from Oliver Hookins and Angela Collins. We currently reside in Sydney after almost a decade in Berlin, have three kids, and have far too little time to really justify having a blog.
       </p>
     </blockquote>
   </div>
