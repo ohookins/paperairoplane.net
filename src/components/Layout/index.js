@@ -2,9 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 
-import Header from "../components/Header";
-import Buttons from "../components/Buttons";
-import Footer from "../components/Footer";
+import Header from "../Header";
+import Buttons from "../Buttons";
+import Footer from "../Footer";
 import "./index.css";
 
 const TemplateWrapper = ({ children }) => (
