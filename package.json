@@ -6,7 +6,7 @@
   "homepage": "https://paperairoplane.net",
   "dependencies": {
     "date-fns": "^2.28.0",
-    "disqus-react": "^1.0.5",
+    "disqus-react": "^1.1.2",
     "gatsby": "^3.0.0",
     "gatsby-plugin-feed": "^3.0.0",
     "gatsby-plugin-image": "^1.0.0",
