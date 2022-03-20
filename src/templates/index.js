@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "gatsby-link";
+import Link from "gatsby";
 import Layout from "../components/Layout"
 import PublishLine from "../components/PublishLine";
 import "./index.css";

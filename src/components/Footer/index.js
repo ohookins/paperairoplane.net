@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "gatsby-link";
 
 const Footer = () => (
   <div className="cabin center mw6 flex justify-center">
