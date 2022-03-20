@@ -6,6 +6,7 @@ module.exports = {
       "Writings on various topics (mostly technical) from Oliver Hookins and Angela Collins"
   },
   plugins: [
+    "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
     "gatsby-transformer-remark",
     {
